@@ -15,8 +15,11 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@filamentphp.com',
+            'name'     => 'Test User',
+            'email'    => 'test@filamentphp.com',
+            'password' => bcrypt('password'),
         ]);
+
+        \App\Models\User::factory(10)->create();
     }
 }
